@@ -87,3 +87,19 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.audio@2.1-impl \
+    android.hardware.bluetooth@1.1-service-mediatek \
+    libbluetooth_audio_session \
+    libbluetooth_audio_session_mediatek \
+    libbt-vendor \
+    libbluetooth_mtk \
+    libbluetoothem_mtk
+
+# Boot Control
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-service \
+    com.android.hardware.boot \
+    android.hardware.boot-service.default_recovery
