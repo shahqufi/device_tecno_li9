@@ -1,0 +1,19 @@
+on early-init
+    write /dev/kmsg "++++ early-init start ++++"
+
+on init
+    write /dev/kmsg "++++ init start ++++"
+
+on late-init
+    write /dev/kmsg "++++ late-init start ++++"
+
+on early-init
+    start adbd
+
+service adbd /system/bin/adbd
+    class core
+    user root
+    group root shell
+    seclabel u:r:adbd:s0
+    oneshot
+
