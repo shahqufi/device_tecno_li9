@@ -505,6 +505,16 @@ PRODUCT_PACKAGES += \
    vndservicemanager \
    vndservice
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.mediatek \
+    libvibrator \
+    vibrator.default \
+    libhapticgenerator \
+    libaacvibrator \
+    vendor.aac.hardware.richtap.vibrator-V1-ndk_platform \
+    haptic_fs_core.default
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     libwifi-hal \
