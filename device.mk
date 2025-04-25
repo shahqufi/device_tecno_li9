@@ -274,6 +274,16 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     Tag
 
+# Overlays
+PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_PACKAGES += \
+    FrameworksResCommon \
+    PowerOffAlarmOverlayCommon \
+    SettingsResOverlayCommon \
+    SystemUIResCommon \
+    TelephonyResCommon \
+    WifiResOverlayCommon
+
 
 # Sensors
 PRODUCT_PACKAGES += \
