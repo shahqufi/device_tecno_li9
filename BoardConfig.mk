@@ -70,13 +70,18 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 TARGET_BOOTLOADER_BOARD_NAME := li9_h335
 TARGET_NO_BOOTLOADER := false
 
-# Kernel
-TARGET_FORCE_PREBUILT_KERNEL := true
-BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)-kernel/dtb
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
+# DTB
+BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
+BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtb
 
-BOARD_KERNEL_IMAGE_NAME := Image.gz
+# Kernel
+TARGET_NO_KERNEL_OVERRIDE := true
+LOCAL_KERNEL := $(KERNEL_PATH)/Image.gz
+PRODUCT_COPY_FILES += \
+	$(LOCAL_KERNEL):kernel
+
+# Workaround to make lineage's soong generator work
+TARGET_KERNEL_SOURCE := $(KERNEL_PATH)/kernel-headers
 
 BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)-kernel/vendor/*.ko)
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules/modules.load))
