@@ -51,3 +51,33 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# Use 64-bit audio HAL
+$(call soong_config_set,android_hardware_audio,run_64bit,true)
+
+# Audio HAL packages
+PRODUCT_PACKAGES += \
+    android.hardware.audio@7.0-impl \
+    android.hardware.audio.effect@7.0-impl \
+    android.hardware.audio.sounddose-vendor-impl \
+    android.hardware.soundtrigger@2.3-impl \
+    android.hardware.audio.service \
+    android.hardware.bluetooth.audio-impl \
+    audio.bluetooth.default \
+    audio.usb.default \
+    MtkInCallService \
+    libaudiofoundation.vendor \
+    libbluetooth_audio_session \
+    libunwindstack.vendor \
+    libalsautils \
+    libnbaio_mono \
+    libtinycompress \
+    libdynproc \
+    libhapticgenerator
+
+# Audio configuration files
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
+
+PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
