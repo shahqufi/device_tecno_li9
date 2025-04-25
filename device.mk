@@ -211,6 +211,28 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
+# Init files
+PRODUCT_PACKAGES += \
+    fstab.mt6833 \
+    init_connectivity.rc \
+    init.aee.rc \
+    init.connectivity.common.rc \
+    init.connectivity.rc \
+    init.insmod.sh \
+    init.insmod.mt6833.cfg \
+    init.modem.rc \
+    init.mt6833.power.rc \
+    init.mt6833.rc \
+    init.mt6833.usb.rc \
+    init.mtkgki.rc \
+    init.project.rc \
+    init.recovery.usb.rc \
+    init.sensor_2_0.rc \
+    ueventd.mt6833.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6833:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.mt6833
+
 # IMS
 PRODUCT_BOOT_JARS += \
     mediatek-common \
