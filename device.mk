@@ -223,6 +223,19 @@ PRODUCT_PACKAGES += \
     libui_shim \
     libshim_sink
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1-service \
+    android.hardware.keymaster@4.1.vendor \
+    vendor.mediatek.hardware.keymaster_attestation@1.1-service \
+    libkeymaster_messages.vendor \
+    libkeymaster_portable.vendor \
+    libkeymaster4.vendor \
+    libkeymaster4_1support.vendor \
+    libkeymaster41.vendor \
+    libsoft_attestation_cert \
+    libkmsetkey
+
 
 # Sensors
 PRODUCT_PACKAGES += \
