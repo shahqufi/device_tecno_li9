@@ -12,14 +12,15 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
-    boot \
-    product \
     system \
+    product \
     system_ext \
+    vendor \
     vbmeta \
     vbmeta_system \
     vbmeta_vendor \
-    vendor
+    vendor_boot \
+    boot
     
 # Assert
 TARGET_OTA_ASSERT_DEVICE := li9
