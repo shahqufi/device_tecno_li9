@@ -266,6 +266,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
     $(LOCAL_PATH)/configs/linker.config.json
 
+# Modules
+PRODUCT_PACKAGES += \
+    init.insmod.sh \
+    init.insmod.mt6833.cfg
+
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.2.vendor:64 \
