@@ -236,6 +236,10 @@ PRODUCT_PACKAGES += \
     libsoft_attestation_cert \
     libkmsetkey
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.transsion
+
 
 # Sensors
 PRODUCT_PACKAGES += \
