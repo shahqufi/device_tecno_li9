@@ -120,3 +120,41 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service \
     consumerir.common
+
+# Cgroup
+PRODUCT_COPY_FILES += \
+    system/core/libprocessgroup/profiles/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
+    system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
+
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.1-service \
+    vendor.mediatek.hardware.composer_ext@1.0 \
+    android.hardware.memtrack-service.mediatek 
+
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@4.0-service-mediatek \
+    android.frameworks.sensorservice@1.0.vendor \
+    libdrm.vendor \
+    libgralloc_extra \
+    libgralloctypes_mtk \
+    libgralloc_metadata \
+    vendor.mediatek.hardware.pq@2.15-service
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm-service.clearkey \
+    android.hardware.drm@1.4.vendor
+
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_BUILD_SUPER_PARTITION := false
+
+
+
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0-service.multihal-mediatek
+
+
+
