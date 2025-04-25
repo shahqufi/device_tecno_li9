@@ -478,5 +478,27 @@ PRODUCT_PACKAGES += \
    vndservicemanager \
    vndservice
 
+# Wi-Fi
+PRODUCT_PACKAGES += \
+    libwifi-hal \
+    android.hardware.wifi@1.5.vendor \
+    vendor.transsion.hardware.wifi.hostapd@1.0.vendor \
+    android.hardware.wifi.supplicant@1.4.vendor \
+    wpa_supplicant \
+    hostapd \
+    wlan_assistant \
+    libwpa_client \
+    libconnfem \
+    libnvram \
+    libcustom_nvram \
+    libkeystore-wifi-hidl:64 \
+    libkeystore-engine-wifi-hidl:64 \
+    android.hardware.tetheroffload.config@1.0.vendor \
+    android.hardware.tetheroffload.control@1.0.vendor \
+    android.hardware.tetheroffload.control@1.1.vendor
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
+
 
 
