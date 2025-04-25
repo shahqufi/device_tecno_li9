@@ -192,6 +192,18 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-service \
     libfgauge_gm30 \
     libmtk_bsg
+
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.allocator@1.0.vendor \
+    android.hidl.base@1.0.vendor \
+    libhidltransport \
+    libhidltransport.vendor \
+    libhwbinder.vendor \
+    vendor.mediatek.hardware.nvram@1.1-service \
+    vendor.mediatek.hardware.mms@1.6-service \
+    loghidlvendorservice \
+    lbs_hidl_service
     
 # Sensors
 PRODUCT_PACKAGES += \
