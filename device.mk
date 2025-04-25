@@ -363,9 +363,24 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
      PowerOffAlarm
 
-# Protobuf
+# Radio
 PRODUCT_PACKAGES += \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat
+    android.hardware.radio@1.6.vendor \
+    android.hardware.radio.config@1.3.vendor \
+    vendor.mediatek.hardware.mtkradioex@3.0.vendor \
+    vendor.mediatek.hardware.radio_op@3.0.vendor \
+    mtkfusionrild \
+    tranradionet \
+    libmtk-ril \
+    libmtkmipc-ril \
+    librilfusion \
+    libmtkrilutils \
+    libprotobuf-cpp-full.vendor \
+    libprotobuf-cpp-lite.vendor \
+    libprotobuf-cpp-full-3.9.1-vendorcompat \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat \
+    fmradio_drv
+
 
 # Sensors
 PRODUCT_PACKAGES += \
