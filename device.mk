@@ -163,6 +163,11 @@ PRODUCT_PACKAGES += \
     libgf_hal \
     gf_fingerprint.default
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal-mediatek
