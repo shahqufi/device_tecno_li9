@@ -185,6 +185,14 @@ PRODUCT_PACKAGES += \
     mtk_agpsd \
     mnld
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-impl.recovery \
+    android.hardware.health@2.1-service \
+    libfgauge_gm30 \
+    libmtk_bsg
+    
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal-mediatek
