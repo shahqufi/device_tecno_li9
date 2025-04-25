@@ -168,6 +168,19 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
+# GNSS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.1-service-mediatek \
+    android.hardware.gnss.visibility_control@1.0.vendor \
+    libcurl.vendor \
+    libexpat.vendor \
+    libmnl \
+    libmtk-ril \
+    libDR \
+    gps.default \
+    mtk_agpsd \
+    mnld
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal-mediatek
