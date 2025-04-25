@@ -69,6 +69,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     MtkInCallService \
+    DSPVolumeSynchronizer 
+
 
 PRODUCT_PACKAGES += \
     libaudiofoundation.vendor \
