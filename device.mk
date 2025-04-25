@@ -114,3 +114,9 @@ PRODUCT_PACKAGES += \
     libcam.halsensor \
     vendor.mediatek.hardware.camera.bgservice@1.1 \
     vendor.mediatek.hardware.camera.atms@1.0
+
+# Consumer IR
+PRODUCT_PACKAGES += \
+    android.hardware.ir@1.0-impl \
+    android.hardware.ir@1.0-service \
+    consumerir.common
