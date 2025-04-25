@@ -381,6 +381,46 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
     fmradio_drv
 
+# Required libs as of 14 QPR3
+PRODUCT_PACKAGES += \
+    libshim_camera_metadata \
+    libexpat.vendor \
+    libunwindstack.vendor \
+    libchrome.vendor \
+    libcurl.vendor \
+    libutilscallstack.vendor \
+    libexif.vendor \
+    libdng_sdk.vendor \
+    liblz4.vendor \
+    libpiex \
+    libexpat.vendor \
+    libpng.vendor \
+    libion.vendor \
+    libui.vendor \
+    libmemunreachable.vendor \
+    libgatekeeper.vendor \
+    libjsoncpp.vendor \
+    libnetutils.vendor \
+    libdumpstateutil.vendor \
+    libpower.vendor \
+    libruy.vendor \
+    libpcap.vendor \
+    libsqlite.vendor \
+    libtextclassifier_hash.vendor \
+    libutilscallstack.vendor \
+    libziparchive.vendor \
+    libhidlmemory.vendor 
+
+# Required libs as of 15 QPR2
+PRODUCT_PACKAGES += \
+   libbase_shim \
+   libprocessgroup_shim \
+   libbinder-v32 \
+   libstagefright_foundation-v33 \
+   libutils-shim \
+   libutils-v32 \
+   libutils-v32.transsion
+
 
 # Sensors
 PRODUCT_PACKAGES += \
