@@ -103,3 +103,14 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-service \
     com.android.hardware.boot \
     android.hardware.boot-service.default_recovery
+
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.6.vendor \
+    android.hardware.camera.device@3.6.vendor \
+    camerahalserver \
+    libcameracustom \
+    libmtkcam_pipelinemodel \
+    libcam.halsensor \
+    vendor.mediatek.hardware.camera.bgservice@1.1 \
+    vendor.mediatek.hardware.camera.atms@1.0
