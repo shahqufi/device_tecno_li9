@@ -363,7 +363,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
      PowerOffAlarm
 
-
+# Protobuf
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 # Sensors
 PRODUCT_PACKAGES += \
