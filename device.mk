@@ -214,6 +214,7 @@ PRODUCT_COPY_FILES += \
 # Init files
 PRODUCT_PACKAGES += \
     fstab.mt6833 \
+    fstab.mt6833.vendor_ramdisk \
     init_connectivity.rc \
     init.aee.rc \
     init.connectivity.common.rc \
@@ -229,9 +230,6 @@ PRODUCT_PACKAGES += \
     init.recovery.usb.rc \
     init.sensor_2_0.rc \
     ueventd.mt6833.rc
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6833:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.mt6833
 
 # IMS
 PRODUCT_BOOT_JARS += \
