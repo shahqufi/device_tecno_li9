@@ -163,6 +163,10 @@ PRODUCT_PACKAGES += \
     libgf_hal \
     gf_fingerprint.default
 
+# FM Radio
+PRODUCT_PACKAGES += \
+    FMRadio
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
