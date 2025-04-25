@@ -19,6 +19,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Allow userspace reboots
+$(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
+
 PRODUCT_PACKAGES += \
     create_pl_dev \
     create_pl_dev.recovery
