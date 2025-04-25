@@ -61,10 +61,16 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.sounddose-vendor-impl \
     android.hardware.soundtrigger@2.3-impl \
     android.hardware.audio.service \
+
+PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
     audio.bluetooth.default \
     audio.usb.default \
+
+PRODUCT_PACKAGES += \
     MtkInCallService \
+
+PRODUCT_PACKAGES += \
     libaudiofoundation.vendor \
     libbluetooth_audio_session \
     libunwindstack.vendor \
