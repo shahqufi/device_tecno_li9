@@ -155,6 +155,13 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl.custom \
     fastbootd
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service-mediatek \
+    vendor.mediatek.hardware.biometrics.fingerprint@2.1 \
+    vendor.goodix.hardware.biometrics.fingerprint@2.1 \
+    libgf_hal \
+    gf_fingerprint.default
 
 # Sensors
 PRODUCT_PACKAGES += \
