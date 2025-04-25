@@ -23,7 +23,7 @@ AB_OTA_PARTITIONS := \
     boot
     
 # Assert
-TARGET_OTA_ASSERT_DEVICE := li9
+TARGET_OTA_ASSERT_DEVICE := li9,li9_h335
 
 # Architecture
 TARGET_ARCH := arm64
