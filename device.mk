@@ -61,7 +61,6 @@ $(call soong_config_set,android_hardware_audio,run_64bit,true)
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
     android.hardware.audio.effect@7.0-impl \
-    android.hardware.audio.sounddose-vendor-impl \
     android.hardware.soundtrigger@2.3-impl \
     android.hardware.audio.service \
 
@@ -99,13 +98,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.1-impl \
-    android.hardware.bluetooth@1.1-service-mediatek \
-    libbluetooth_audio_session \
-    libbluetooth_audio_session_mediatek \
-    libbt-vendor \
-    libbluetooth_mtk \
-    libbluetoothem_mtk
-
+    libbluetooth_audio_session 
 # Boot Control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-service \
@@ -115,19 +108,12 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6.vendor \
-    android.hardware.camera.device@3.6.vendor \
-    camerahalserver \
-    libcameracustom \
-    libmtkcam_pipelinemodel \
-    libcam.halsensor \
-    vendor.mediatek.hardware.camera.bgservice@1.1 \
-    vendor.mediatek.hardware.camera.atms@1.0
+    android.hardware.camera.device@3.6.vendor  
 
 # Consumer IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
-    android.hardware.ir@1.0-service \
-    consumerir.common
+    android.hardware.ir@1.0-service 
 
 # Cgroup
 PRODUCT_COPY_FILES += \
@@ -136,18 +122,11 @@ PRODUCT_COPY_FILES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.1-service \
-    vendor.mediatek.hardware.composer_ext@1.0 \
-    android.hardware.memtrack-service.mediatek 
+    android.hardware.graphics.composer@2.1-service 
 
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@4.0-service-mediatek \
     android.frameworks.sensorservice@1.0.vendor \
     libdrm.vendor \
-    libgralloc_extra \
-    libgralloctypes_mtk \
-    libgralloc_metadata \
-    vendor.mediatek.hardware.pq@2.15-service
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -165,11 +144,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service-mediatek \
-    vendor.mediatek.hardware.biometrics.fingerprint@2.1 \
-    vendor.goodix.hardware.biometrics.fingerprint@2.1 \
-    libgf_hal \
-    gf_fingerprint.default
+    android.hardware.biometrics.fingerprint@2.1-service-mediatek 
 
 # FM Radio
 PRODUCT_PACKAGES += \
@@ -182,37 +157,22 @@ PRODUCT_PACKAGES += \
 
 # GNSS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1-service-mediatek \
     android.hardware.gnss.visibility_control@1.0.vendor \
     libcurl.vendor \
     libexpat.vendor \
-    libmnl \
-    libmtk-ril \
-    libDR \
-    gps.default \
-    mtk_agpsd \
-    mnld
-
+    libmtk-ril 
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service \
-    libfgauge_gm30 \
-    libmtk_bsg
-
+    android.hardware.health@2.1-service 
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0.vendor \
     android.hidl.base@1.0.vendor \
     libhidltransport \
     libhidltransport.vendor \
-    libhwbinder.vendor \
-    vendor.mediatek.hardware.nvram@1.1-service \
-    vendor.mediatek.hardware.mms@1.6-service \
-    loghidlvendorservice \
-    lbs_hidl_service
-
+    libhwbinder.vendor 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
@@ -255,15 +215,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1-service \
     android.hardware.keymaster@4.1.vendor \
-    vendor.mediatek.hardware.keymaster_attestation@1.1-service \
     libkeymaster_messages.vendor \
     libkeymaster_portable.vendor \
     libkeymaster4.vendor \
     libkeymaster4_1support.vendor \
     libkeymaster41.vendor \
-    libsoft_attestation_cert \
-    libkmsetkey
-
+    libsoft_attestation_cert 
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.transsion
@@ -400,19 +357,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor \
     android.hardware.radio.config@1.3.vendor \
-    vendor.mediatek.hardware.mtkradioex@3.0.vendor \
-    vendor.mediatek.hardware.radio_op@3.0.vendor \
-    mtkfusionrild \
-    tranradionet \
-    libmtk-ril \
-    libmtkmipc-ril \
-    librilfusion \
-    libmtkrilutils \
     libprotobuf-cpp-full.vendor \
     libprotobuf-cpp-lite.vendor \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat \
-    fmradio_drv
+    libprotobuf-cpp-lite-3.9.1-vendorcompat 
 
 # Required libs as of 14 QPR3
 PRODUCT_PACKAGES += \
@@ -444,16 +392,6 @@ PRODUCT_PACKAGES += \
     libziparchive.vendor \
     libhidlmemory.vendor 
 
-# Required libs as of 15 QPR2
-PRODUCT_PACKAGES += \
-   libbase_shim \
-   libprocessgroup_shim \
-   libbinder-v32 \
-   libstagefright_foundation-v33 \
-   libutils-shim \
-   libutils-v32 \
-   libutils-v32.transsion
-
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v32.so \
     prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase-v32.so
@@ -470,12 +408,6 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@2.1-service.multihal \
     android.hardware.sensors@2.0-ScopedWakelock.vendor \
-    sensors.mt6833 \
-    libsensor_custom \
-    libcameracustom.camera.sensors \
-    libksensor \
-    librgbwlightsensor \
-    libnvram \
     libcustom_nvram
 
 PRODUCT_COPY_FILES += \
@@ -516,24 +448,16 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek \
     libvibrator \
     vibrator.default \
-    libhapticgenerator \
-    libaacvibrator \
-    vendor.aac.hardware.richtap.vibrator-V1-ndk_platform \
-    haptic_fs_core.default
-
+    libhapticgenerator 
 # Wi-Fi
 PRODUCT_PACKAGES += \
     libwifi-hal \
     android.hardware.wifi@1.5.vendor \
-    vendor.transsion.hardware.wifi.hostapd@1.0.vendor \
     android.hardware.wifi.supplicant@1.4.vendor \
     wpa_supplicant \
     hostapd \
-    wlan_assistant \
     libwpa_client \
-    libconnfem \
     libnvram \
-    libcustom_nvram \
     libkeystore-wifi-hidl:64 \
     libkeystore-engine-wifi-hidl:64 \
     android.hardware.tetheroffload.config@1.0.vendor \
